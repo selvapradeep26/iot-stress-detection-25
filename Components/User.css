@@ -1,0 +1,40 @@
+/* Main container for the user card */
+.user-card {
+  background-color: white;
+  border-radius: 15px; /* Softer rounded corners */
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* For the floating card effect */
+  width: 400px;
+  height: 400px;
+  padding: 24px;
+  font-size: 1.05rem;
+  box-sizing: border-box;
+}
+
+/* Styles for the header section containing the "User info" title */
+.user-header {
+  border-bottom: 1px solid #eee; /* A subtle line to separate header from content */
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+/* Target the h2 tag within the header */
+.user-header h2 {
+  margin: 0; /* Removes the default margin from the h2 tag */
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* Styles for the paragraphs holding the user details */
+.user-details p {
+  margin: 12px 0; /* Adds vertical space between each line item */
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6; /* Improves readability */
+}
+
+/* Makes the labels (Name:, Email:, etc.) stand out */
+.user-details p strong {
+  color: #000;
+  margin-right: 8px; /* Adds a bit of space between the label and the value */
+}
