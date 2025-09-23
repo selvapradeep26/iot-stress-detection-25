@@ -1,23 +1,20 @@
 import './Navbar.css'
 
 function Navbar(){
-
     return(
-        <div className="Nbar">
-        <nav>
+        <nav className="navbar">
             <ul className='nav-list'>
-                <li className='class-item'>
-                    <a href="/" className='Nav-link'>Home</a>
+                <li className='nav-item'>
+                    <a href="/" className='nav-link'>Home</a>
                 </li>
-                 <li className='class-item'>
-                    <a href="/">About</a>
+                <li className='nav-item'>
+                    <a href="/" className='nav-link'>About</a>
                 </li>
-                 <li className='class-item'>
-                    <a href="/">contact</a>
+                <li className='nav-item'>
+                    <a href="/" className='nav-link'>Contact</a>
                 </li>
             </ul>
         </nav>
-        </div>
     )
 }
 

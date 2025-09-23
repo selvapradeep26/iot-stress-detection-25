@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+body {
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -57,6 +61,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 64px;
+  border-radius: 16px;
+  padding: 1rem 0;
+}
+
+main {
+  margin-top: 64px;
+  border-radius: 16px;
+  padding: 2rem 1rem;
+}
+
+.Nav + .App-header,
+.Nav + main {
+  margin-top: 64px;
 }
 
 .main-flex {
@@ -64,6 +82,8 @@
   justify-content: center;
   align-items: flex-start;
   gap: 1.2rem;
+  border-radius: 12px;
+  padding: 1rem;
 }
 
 /* Make both cards same size and small gap */
@@ -74,7 +94,7 @@
   justify-content: center;
   flex: 1; /* both take equal width */
   max-width: 350px; /* optional fixed max width */
-  margin: 0 2rem; /* very small gap between cards */
+  margin: 0 20rem; /* very small gap between cards */
   box-sizing: border-box;
 }
 
