@@ -1,8 +1,11 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LevelCard from '../Components/Stresscard'
 import Navbar from '../Components/Navbar';
 import UserCard from '../Components/User';
 import StressHistory from '../Components/Stresshistory';
+import Login from '../Components/Login';
+import Signup from '../Components/Signup';
 import './App.css'
 
 const stressData = [
@@ -13,27 +16,11 @@ const stressData = [
   { date: '2025-09-22', stress: 70 },
 ];
 
-function App() {
-  const [stressLevel, setStressLevel] = useState("Medium");
-  const [stressPercentage, setStressPercetage] = useState(90);
-
-  const[userName,setUserName] = useState('');
-
-  const handleNameChange = (event) =>{
-    setUserName(event.target.value);
-  }
-  const userData = {
-    name: "Selva Pradeep E",
-    email: "ABC@gmail.com",
-    occupation: "Software Develeoper",
-    lastlogin: "2 hours ago"
-  }
-
-  return(
-    <div className = 'App'>
-      <div className="Nav">
-        <Navbar></Navbar>
-      </div>
+function Dashboard({ user }) {
+  const [stressLevel] = useState("Medium");
+  const [stressPercentage] = useState(90);
+  return (
+    <>
       <header className = "App-header">
         <div className = "Text-al">
           <h1>Stress Level Dashboard</h1>
@@ -49,14 +36,38 @@ function App() {
             />
           </div>
           <div className='User'>
-            <UserCard user={userData} />
+            <UserCard user={user} />
           </div>
         </div>
         <div style={{ marginTop: '2rem', width: '100%' }}>
           <StressHistory data={stressData} />
         </div>
       </main>
-    </div>
+    </>
+  );
+}
+
+function App() {
+  const [user, setUser] = useState({
+    name: "Selva Pradeep E",
+    email: "ABC@gmail.com",
+    occupation: "Software Developer",
+    lastLogin: "2 hours ago"
+  });
+
+  return(
+    <Router>
+      <div className = 'App'>
+        <div className="Nav">
+          <Navbar />
+        </div>
+        <Routes>
+          <Route path="/login" element={<Login setUser={setUser} />} />
+          <Route path="/signup" element={<Signup setUser={setUser} />} />
+          <Route path="/" element={<Dashboard user={user} />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

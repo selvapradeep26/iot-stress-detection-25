@@ -49,7 +49,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.1 rem;
 }
 
 .Text-al h1 {
@@ -61,7 +61,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 64px;
+  margin-top: 60px;
   border-radius: 16px;
   padding: 1rem 0;
 }
@@ -74,7 +74,7 @@ main {
 
 .Nav + .App-header,
 .Nav + main {
-  margin-top: 64px;
+  margin-top: 50px;
 }
 
 .main-flex {

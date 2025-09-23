@@ -5,7 +5,7 @@
   border: 1px solid #e0e0e0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* For the floating card effect */
   width: 620px;
-  height: 400px;
+  height: 460px;
   padding: 24px;
   font-family: Arial, sans-serif;
   font-size: 2.05rem;
@@ -29,6 +29,7 @@
 /* Styles for the paragraphs holding the user details */
 .user-details {
   text-align: center;
+  margin-top: 70px;
 }
 
 .user-details p {
